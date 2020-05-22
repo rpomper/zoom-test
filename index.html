@@ -39,7 +39,7 @@
 
 //Enter subject id
 var subject_id = prompt("Enter subject id", "test");
-var trial_order = prompt("Order (1-8)","1");
+var trial_order = prompt("Order (1-4)","1");
 // var input = prompt("Enter input type (touch or click)","touch");
 
 // jsPsych.data.addProperties({
@@ -47,7 +47,7 @@ var trial_order = prompt("Order (1-8)","1");
 // 	order: trial_order
 // });
 
-var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1CbJfFGvxbQbdGwK85xz8LEIpOO0umJKJcSZ5L7aKB1E/pubhtml';
+var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTUloci3FFgv80Jq0sqMlDUJtHtQElasmdc9sy_lnw2G2uU5oeaqPU0IMMtOgXq7uF95qDbXsAJdoWq/pubhtml';
 
 var tabletop = Tabletop.init( { key: publicSpreadsheetUrl,
                    callback: startExperiment,
