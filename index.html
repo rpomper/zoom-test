@@ -95,16 +95,16 @@ function createTrials(data, tabletop) {
 
   timeline.push(welcome);
 
-  var instructions = {
-    type: 'audio-button-response-flexiblelocations',
-    stimulus: 'stimuli/sounds/Intro.wav',
-    margin_top: ['400px'],
-    margin_bottom: ['0px'],
-    set_background: 'face-closed',
-    choices: ['Go']
-  }
-
-  timeline.push(instructions);
+  // var instructions = {
+  //   type: 'audio-button-response-flexiblelocations',
+  //   stimulus: 'stimuli/sounds/Intro.wav',
+  //   margin_top: ['400px'],
+  //   margin_bottom: ['0px'],
+  //   set_background: 'face-closed',
+  //   choices: ['Go']
+  // }
+  //
+  // timeline.push(instructions);
 
   var expLength = data.length;
   var audioExt="stimuli/sounds/"
@@ -151,46 +151,44 @@ function createTrials(data, tabletop) {
 
 var imageExt = 'stimuli/images/'
 
-var images = [imageExt+'Apple.jpg',
-imageExt+'Ball.jpg',
-imageExt+'Ball2.jpg',
-imageExt+'Bear.jpg',
-imageExt+'Bear2.jpg',
-imageExt+'Bib.jpg',
+var images = [imageExt+'balloons-left.jpg',
+imageExt+'balloons-right.jpg',
+imageExt+'beach-left.jpg',
+imageExt+'beach-right.jpg',
+imageExt+'black-background.jpg',
 imageExt+'black.jpg',
-imageExt+'Blocks.jpg',
-imageExt+'blue.png',
-imageExt+'Boat.jpg',
 imageExt+'bunnies.gif',
-imageExt+'Cake.jpg',
-imageExt+'Cake2.jpg',
-imageExt+'Carrots.jpg',
-imageExt+'Cheese.jpg',
-imageExt+'Cheese2.jpg',
-imageExt+'Comb.jpg',
-imageExt+'Cookie.jpg',
-imageExt+'Cookie2.jpg',
-imageExt+'Corn.jpg',
-imageExt+'Doll.jpg',
-imageExt+'Donut.jpg',
-imageExt+'Duck.jpg',
-imageExt+'Duck2.jpg',
-imageExt+'face-closed.jpg',
-imageExt+'face-open.jpg',
+imageExt+'circle-blue.jpg',
+imageExt+'circle-green.jpg',
+imageExt+'circle-red.png',
+imageExt+'circle-white.jpg',
+imageExt+'circle-yellow.jpg',
 imageExt+'fireworks_left.jpg',
 imageExt+'fireworks_right.jpg',
-imageExt+'Grapes.jpg',
-imageExt+'Hammer.jpg',
-imageExt+'kitchen.jpg',
-imageExt+'Novel1.jpg',
-imageExt+'Novel2.jpg',
-imageExt+'Novel3.jpg',
-imageExt+'Novel4.jpg',
-imageExt+'playroom.jpg',
-imageExt+'Puzzle.jpg',
-imageExt+'Truck.jpg',
-imageExt+'Truck2.jpg',
-imageExt+'Zipper.jpg'];
+imageExt+'heart-blue.jpg',
+imageExt+'heart-green.jpg',
+imageExt+'heart-red.jpg',
+imageExt+'heart-white.jpg',
+imageExt+'heart-yellow.jpg',
+imageExt+'mountain-left.jpg',
+imageExt+'mountain-right.jpg',
+imageExt+'ocean-left.jpg',
+imageExt+'ocean-right.jpg',
+imageExt+'square-blue.jpg',
+imageExt+'square-green.jpg',
+imageExt+'square-red.jpg',
+imageExt+'square-white.jpg',
+imageExt+'square-yellow.jpg',
+imageExt+'star-blue.jpg',
+imageExt+'star-green.jpg',
+imageExt+'star-red.jpg',
+imageExt+'star-white.jpg',
+imageExt+'star-yellow.jpg',
+imageExt+'triangle-blue.jpg',
+imageExt+'triangle-green.jpg',
+imageExt+'triangle-red.jpg',
+imageExt+'triangle-white.jpg',
+imageExt+'triangle-yellow.jpg',;
 
 
 function startExperiment(data, tabletop) {
