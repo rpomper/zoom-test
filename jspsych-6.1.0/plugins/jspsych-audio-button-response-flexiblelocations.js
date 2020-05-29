@@ -210,7 +210,7 @@ jsPsych.plugins["audio-button-response-flexiblelocations"] = (function() {
       };
 
       // change background to be black
-      document.body.style.backgroundImage = "url('stimuli/images/black-background.jpg')"
+      // document.body.style.backgroundImage = "url('stimuli/images/black-background.jpg')"
       // clear the display
       display_element.innerHTML = '';
 
@@ -225,8 +225,10 @@ jsPsych.plugins["audio-button-response-flexiblelocations"] = (function() {
     if(context !== null){
       startTime = context.currentTime;
       source.start(startTime);
+      document.body.style.backgroundImage = "url('stimuli/images/black-background.jpg')"
     } else {
       audio.play();
+      document.body.style.backgroundImage = "url('stimuli/images/black-background.jpg')"
     }
 
     // end trial if time limit is set
