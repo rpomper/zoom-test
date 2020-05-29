@@ -209,6 +209,8 @@ jsPsych.plugins["audio-button-response-flexiblelocations"] = (function() {
         "button_pressed": response.button
       };
 
+      // change background to be black
+      document.body.style.backgroundImage = "url('stimuli/images/black-background.jpg')"
       // clear the display
       display_element.innerHTML = '';
 
