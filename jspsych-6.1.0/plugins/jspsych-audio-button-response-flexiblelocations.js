@@ -225,15 +225,16 @@ jsPsych.plugins["audio-button-response-flexiblelocations"] = (function() {
     if(context !== null){
       startTime = context.currentTime;
       source.start(startTime);
-      document.body.style.backgroundImage = "url('stimuli/images/black-background.jpg')"
+      // document.body.style.backgroundImage = "url('stimuli/images/black-background.jpg')"
     } else {
       audio.play();
-      document.body.style.backgroundImage = "url('stimuli/images/black-background.jpg')"
+      // document.body.style.backgroundImage = "url('stimuli/images/black-background.jpg')"
     }
 
     // end trial if time limit is set
     if (trial.trial_duration !== null) {
       jsPsych.pluginAPI.setTimeout(function() {
+        document.body.style.backgroundImage = "url('stimuli/images/black-background.jpg')";
         end_trial();
       }, trial.trial_duration);
     }
