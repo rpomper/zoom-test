@@ -123,6 +123,35 @@ function createTrials(data, tabletop) {
     })
   }
 
+  // for (var i = 0; i < lwl_stimuli.length i++) {
+  //   cur_trial  = lwl_stimuli[i]
+  //
+  //   cur_lwl_trial = {
+  //       type: 'audio-button-response-flexiblelocations',
+  //       trial_duration: 6243,
+  //       response_ends_trial: false,
+  //       // pause_key: ['a'], // new
+  //       margin_top: ['300px','300px'],
+  //       margin_bottom: ['0px','0px'],
+  //       margin_left: ['0px','89px'],
+  //       margin_right: ['89px','0px'],
+  //       // set_background: 'face-closed',
+  //       // set_background:data.background,
+  //       timeline: cur_trial,
+  //       data: jsPsych.timelineVariable('data'),
+  //       on_finish: function(data) {
+  //         data.correct = data.button_pressed == data.correct_response;
+  //       }
+  //     }
+  //
+  //     timeline.push(cur_lwl_trial);
+  //
+  //     cur_isi = {
+  //
+  //     }
+  //
+  //   }
+
 
   var lwl_trials = {
     type: 'audio-button-response-flexiblelocations',
@@ -131,8 +160,10 @@ function createTrials(data, tabletop) {
     // pause_key: ['a'], // new
     margin_top: ['300px','300px'],
     margin_bottom: ['0px','0px'],
-    margin_left: ['0px','89px'],
-    margin_right: ['89px','0px'],
+    // margin_left: ['0px','89px'],
+    // margin_right: ['89px','0px'],
+    margin_left: ['0px','9px'],
+    margin_right: ['9px','0px'],
     // set_background: 'face-closed',
     // set_background:data.background,
     timeline: lwl_stimuli,

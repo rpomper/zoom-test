@@ -7,6 +7,11 @@
 
  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 
+/* Ron & Martin change the default background to black */
+  body {
+    background-image: url('stimuli/images/black-background.jpg');
+    margin: 0
+  }
 /* Container holding jsPsych content */
 
  .jspsych-display-element {
