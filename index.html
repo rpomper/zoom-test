@@ -60,11 +60,11 @@ var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTUl
 Papa.parse(publicSpreadsheetUrl, {
 	          download: true,
 	          header: true,
-		dynamicTyping: true,
+            dynamicTyping: true,
 	          complete: function(results) {
 	            var data = results.data
 	            console.log(data)
-				startExperiment(data);
+              startExperiment(data);
 	          }
 	        })
 
@@ -237,7 +237,8 @@ imageExt+'triangle-yellow.jpg']
 
 
 function startExperiment(data, tabletop) {
-	createTrials(data,tabletop);
+	// createTrials(data,tabletop);
+  createTrials(data);
 jsPsych.init({
   timeline: timeline,
   // preload_audio:audio,
@@ -250,19 +251,19 @@ jsPsych.init({
 });
 };
 
-function save_data(experiment, version,identifier, data){
-	$.ajax({
-		type: 'post',
-		cache: false,
-		url: 'https://data.infantlearning.waisman.wisc.edu/infantdb/datastore/save/',
-		data: {
-			experiment: experiment,
-	version: version,
-			identifier: identifier,
-			data: data
-		}
-	})
-};
+// function save_data(experiment, version,identifier, data){
+// 	$.ajax({
+// 		type: 'post',
+// 		cache: false,
+// 		url: 'https://data.infantlearning.waisman.wisc.edu/infantdb/datastore/save/',
+// 		data: {
+// 			experiment: experiment,
+// 	version: version,
+// 			identifier: identifier,
+// 			data: data
+// 		}
+// 	})
+// };
 
 
 </script>
