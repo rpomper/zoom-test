@@ -48,14 +48,25 @@ var trial_order = prompt("Order (1-4)","1");
 // });
 
 // var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1CbJfFGvxbQbdGwK85xz8LEIpOO0umJKJcSZ5L7aKB1E/pubhtml';
+// var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1CkTEgaNNceAd8QfzMDhfIGMN-jsHvmg94r_XbwfPrG0/edit?usp=sharing';
 
-var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1CkTEgaNNceAd8QfzMDhfIGMN-jsHvmg94r_XbwfPrG0/edit?usp=sharing';
+// var tabletop = Tabletop.init( { key: publicSpreadsheetUrl,
+//                    callback: startExperiment,
+//                    // wanted:["Order_1"],
+//                    simpleSheet: false } )
 
-var tabletop = Tabletop.init( { key: publicSpreadsheetUrl,
-                   callback: startExperiment,
-                   // wanted:["Order_1"],
-                   simpleSheet: false } )
+var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTUloci3FFgv80Jq0sqMlDUJtHtQElasmdc9sy_lnw2G2uU5oeaqPU0IMMtOgXq7uF95qDbXsAJdoWq/pub?output=csv';
 
+Papa.parse(publicSpreadsheetUrl, {
+	          download: true,
+	          header: true,
+		dynamicTyping: true,
+	          complete: function(results) {
+	            var data = results.data
+	            console.log(data)
+				startExperiment(data);
+	          }
+	        })
 
 // function showInfo(data, tabletop) {
 //   alert('Successfully processed!')
@@ -233,7 +244,7 @@ jsPsych.init({
   preload_images:images,
   default_iti:500,
   on_finish: function() {
-    jsPsych.data.displayData();
+    //jsPsych.data.displayData();
     // save_data('yumME','V1',subject_id, jsPsych.data.dataAsCSV());
   }
 });
