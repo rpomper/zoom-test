@@ -59,8 +59,13 @@ var trial_order = prompt("Order (1-4)","1");
 // all sheets
 // var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTUloci3FFgv80Jq0sqMlDUJtHtQElasmdc9sy_lnw2G2uU5oeaqPU0IMMtOgXq7uF95qDbXsAJdoWq/pub?output=csv';
 
-// sheet 2
-var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTUloci3FFgv80Jq0sqMlDUJtHtQElasmdc9sy_lnw2G2uU5oeaqPU0IMMtOgXq7uF95qDbXsAJdoWq/pub?gid=1562500532&single=true&output=csv';
+// choose sheet
+if (trial_order == "1") {
+  var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTUloci3FFgv80Jq0sqMlDUJtHtQElasmdc9sy_lnw2G2uU5oeaqPU0IMMtOgXq7uF95qDbXsAJdoWq/pub?gid=0&single=true&output=csv';
+} else if (trial_order == "2") {
+  var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTUloci3FFgv80Jq0sqMlDUJtHtQElasmdc9sy_lnw2G2uU5oeaqPU0IMMtOgXq7uF95qDbXsAJdoWq/pub?gid=1562500532&single=true&output=csv';
+}
+
 
 Papa.parse(publicSpreadsheetUrl, {
 	          download: true,
